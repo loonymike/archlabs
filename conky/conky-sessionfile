@@ -1,0 +1,2 @@
+conky -c /home/mike/.config/conky/ArchLabs.conkyrc
+/home/mike/.config/conky/AL-Default.conkyrc & sleep 0.5
