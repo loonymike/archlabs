@@ -1,2 +1,2 @@
 # archlabs
-these are my config files with archlabs linux
+config files archlabs linux
