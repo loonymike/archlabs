@@ -1,27 +1,31 @@
-# launch compton if enabled
+# compton
 al-compositor --start &
 
-# enable numlock, comment out if you dont have a numpad
-numlockx on &
+# enable numlock, commented out for laptop users
+# numlockx &
 
 # restore wallpaper
 nitrogen --restore &
 
 # start panel
-sleep 1; al-polybar-session &
-
-# system tray
-sleep 1; trayer --edge bottom --align left --widthtype request --SetDockType false --expand true &
+sleep 1; polybar --config=/home/mike/.config/polybar/config openbox-bar &
 
 # Openbox autostart
 ob-autostart -d &
 
-# PolicyKit authentication
-lxpolkit &
-
 # Required for xfce settings to work
 xfsettingsd &
 
-# set user shortcuts for file managers
+# Side panel shortcuts for file managers
 xdg-user-dirs-gtk-update &
+
+# systemtray doc
+stalonetray --dockapp-mode simple &
+
+#power manager
+xfce4-power-manager &
+
+#network manager
+nm-applet &
+
 
